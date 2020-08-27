@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drowsiness Alert System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/drivingstyle.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+</head>
+
+<body>
+<!-- Navigation bar -->
+<header id="topnav">
+    <div class="inner">
+        <div class="logo">Drowsiness Alert System</div>
+        <nav role='navigation'>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('alert_system') }}">Alert System</a></li>
+                <li><a href="{{ url_for('driving_tips') }}">Driving Tips</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="pimg9"></div>
+<div class="pimg1">
+		<div class="ptext">
+			<span class="border">
+				Don't Fall asleep at the wheel!
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-light">		
+		<h2>Why do we need this drowsiness alert system?</h2>
+		<p>
+			According to the Global Road Safety Report 2015, <b>141526</b> persons were killed and approximately <b>500000</b> people injured in India because of road crashes.
+The National Highway Traffic Safety Administration reported a total <b>72000</b> crashes, <b>44000</b> injuries and <b>800</b> deaths due to drowsy driving in 2013.
+		</p>
+	</section>
+
+	<div class="pimg2">
+		<div class="ptext">
+			<span class="border trans">
+				Don't Drink and Drive!
+				Don't Drowse and Drive!
+			</span>
+		</div>
+	</div>
+	
+	<section class="section section-dark">		
+		<h2>How does this alert system help?</h2>
+		<p>
+			Our drowsiness alert system detects when you become drowsy using real-time video surveillance and plays a alarm to wake you up and suggests a break.
+It is highly recommended that you take a break from driving as soon as possible and resume only when you are fully rested.
+		</p>
+	</section>
+	
+	<div class="pimg3">
+		<div class="ptext">
+			<span class="border trans1">
+				For a safe and happy journey, please ensure you follow these <strike>guidelines</strike> Basic safety guidelines!
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-dark">		
+		<h2>Don't forget your seatbelt!</h2>
+		<p>
+			We cannot emphasize this enough - always wear your seatbelts at all times and ensure all the other passengers do the same.
+		</p>
+	</section> 
+
+	<div class="pimg4">
+		<div class="ptext">
+			<span class="border">
+				Focus! 
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-light">		
+		<p>
+
+				•	Keep 100% of your attention on driving at all times. <br>
+				•	Avoid multi-tasking. <br>
+				•	Don’t use your phone or any other electronic device while driving. <br>
+
+		</p>
+	</section>
+
+	<div class="pimg5">
+		<div class="ptext">
+			<span class="border">
+				Think before you act
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-dark">		
+		<p>
+			The incessant pressure by other drivers in a busy road can be unsettling, so stay cool and make sure you have interpreted the traffic situation correctly.
+Exercise patience and "hang back" when necessary
+		</p>
+	</section>
+
+	<div class="pimg6">
+		<div class="ptext">
+			<span class="border">
+				Additional guidelines
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-light">		
+		<p>
+		
+			•	Don't try to pick up something that has fallen down when you are at the wheel. <br>
+			•	Have items needed within easy reach – such as toll fees, toll cards and garage passes. <br>
+			•	Drive sober and drug-free. <br>
+			•	Don't allow children to fight or climb around in your car – they should be buckled in their seats at all times. <br>
+			•	Avoid driving when you're tired. <br>
+			•	Be aware that some medications cause drowsiness and make operating a vehicle very dangerous. <br>
+			•	Always use caution when changing lanes. <br>
+			•	Cutting in front of someone, changing lanes too fast or not using your signals may cause an accident or upset other drivers.
+
+		</p>
+	</section>
+
+	<div class="pimg7">
+		<div class="ptext">
+			<span class="border">
+				Defensive driving
+			</span>
+		</div>
+	</div>
+
+	<section class="section section-dark">		
+		<p>
+					
+		•	Be aware of what other drivers around you are doing, and expect the unexpected. <br>
+		•	Assume other motorists will do something crazy, and always be prepared to avoid it. <br>
+		•	Keep a 2-second cushion between you and the car in front of you. Make that 4 seconds if the weather is bad. <br>
+		•	Slow down. Speeding gives you less time to react and increases the severity of an accident. <br>
+
+		</p>
+	</section>
+
+	<div class="pimg8">
+		<div class="ptext">
+			<span class="border">
+				Don't forget to take *BREAKS* and use *BRAKES* while driving!
+			</span>
+		</div>
+	</div>
+
+	<button id="back-to-top-btn"><i class="arrow up"></i></button>
+
+<style>
+/* ////////////////////// NAVIGATION BAR /////////////////////////////////////// */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+::selection {
+  background: #000; color: #aaf;
+}
+
+.alternate ::selection {
+  background: #c00; color: #000;
+}
+
+body {
+  margin: 0; padding: 0; font-size: 16px; line-height: 1.5; 
+}
+
+ul, li, .logo {
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400; margin: 0; padding: 0; font-family:'Times New Roman', Times, serif;
+}
+
+.inner {
+  width: 1400px; position: relative; margin: 0 auto;
+}
+
+header {
+  /* position: fixed; */ width: 100%; background: #000; transition: 0.7s all; z-index: 100;
+}
+
+li {
+  list-style: none; font-size: 20px;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  display: inline; float: left;
+}
+
+nav a {
+  display: inline-block; color: #fff; text-decoration: none; padding: 20px; transition: 0.3s all;
+}
+
+nav a:hover {
+  background: red;
+}
+
+.logo {
+  float: left; color: white; font-size: 40px; line-height: 50px; transition: 0.7s all; padding-top: 5px;
+}
+
+/* //////////////////////// CONTENTS ///////////////////////////// */
+     body, html{
+	height: 100%;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+     line-height: 1.8em; 
+	color: #666;
+} 
+
+
+.pimg1{
+	background-image: url('static/img/img1.jpg');
+	min-height: 100%;
+}
+
+.pimg2{
+	background-image: url('static/img/img2.jpg');
+	min-height: 500px;
+}
+
+.pimg3{
+	background-image: url('static/img/img3.jpg');
+	min-height:400px;
+}
+
+.pimg4{
+	background-image: url('static/img/img4.jpg');
+	min-height:400px;
+}
+
+.pimg5{
+	background-image: url('static/img/img5.jpg');
+	min-height:400px;
+	size: cover;
+}
+
+.pimg6{
+	background-image: url('static/img/img6.jpg');
+	min-height:400px;
+}
+
+.pimg7{
+	background-image: url('static/img/img7.jpg');
+	min-height:400px;
+}
+
+.pimg8{
+	background-image: url('static/img/img8.jpg');
+	min-height: 100%;
+}
+.pimg9{
+	background-image: url('static/img/img9.png');
+	min-height: 100%;
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7, .pimg8, .pimg9{
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.70; 
+	/*this is what make us have that parallax effects 
+	if we wanna remove that effect we have to set to scroll */
+	background-attachment: fixed;
+} 
+
+.section{
+	text-align: center;
+	padding : 50px 80px;
+}
+
+.section-light{
+	background-color: #f2f2f2;
+	color: #666;
+}
+
+.section-dark{	
+	/* background-color: #4c4c4c; */
+	background-color: black;
+	color: #ddd;
+}
+
+.ptext{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	font-size: 27px;
+	/* color: #000; */
+	color: black;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+
+}
+
+.ptext .border{
+	background-color: black;
+	color: #fff;
+	padding: 20px;
+	font-weight: 500;
+}
+
+.ptext .border.trans{
+	/* background-color: transparent; */
+	background-color: #fff;
+	color: black;
+	padding: 20px;
+	font-weight: 500;
+}
+.ptext .border.trans1{
+	background-color: transparent;
+}
+
+@media(max-width : 568px){
+	.pimg1, .pimg2, .pimg{
+		background-attachment: scroll;
+	}
+}
+
+h2 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 20px;
+}
+
+/* ////////////////////// BACK TO TOP BUTTON /////////////////////////////////////// */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #333;
+  border-radius: 50%;
+  transition-duration: 0.9s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+#back-to-top-btn:hover, #back-to-top-btn:focus {
+  background-color: #333;
+  color: #fff;  
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+@media(max-width: 992px) {
+  .container { padding: 20px 100px; }
+  #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
+}
+@media(max-width:768px) {
+  body { font-size: 16px; }
+  .container { padding: 10px 50px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  hr { margin: 30px 0; }
+  #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
+}
+
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;  
+  animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+</style>
+<script>
+	const backToTopButton = document.querySelector("#back-to-top-btn");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+if (window.pageYOffset > 300) { // Show backToTopButton
+  if(!backToTopButton.classList.contains("btnEntrance")) {
+	backToTopButton.classList.remove("btnExit");
+	backToTopButton.classList.add("btnEntrance");
+	backToTopButton.style.display = "block";
+  }
+}
+else { // Hide backToTopButton
+  if(backToTopButton.classList.contains("btnEntrance")) {
+	backToTopButton.classList.remove("btnEntrance");
+	backToTopButton.classList.add("btnExit");
+	setTimeout(function() {
+	  backToTopButton.style.display = "none";
+	}, 500);
+  }
+}
+}
+
+backToTopButton.addEventListener("click", smoothScrollBackToTop);
+
+// function backToTop() {
+//   window.scrollTo(0, 0);
+// }
+
+function smoothScrollBackToTop() {
+const targetPosition = 0;
+const startPosition = window.pageYOffset;
+const distance = targetPosition - startPosition;
+const duration = 750;
+let start = null;
+
+window.requestAnimationFrame(step);
+
+function step(timestamp) {
+  if (!start) start = timestamp;
+  const progress = timestamp - start;
+  window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+  if (progress < duration) window.requestAnimationFrame(step);
+}
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d/2;
+  if (t < 1) return c/2*t*t*t + b;
+  t -= 2;
+  return c/2*(t*t*t + 2) + b;
+};
+</script>
+
+</body>
+</html>
